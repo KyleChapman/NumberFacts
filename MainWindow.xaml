@@ -1,0 +1,19 @@
+﻿<Window x:Class="NumberFacts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumberFacts"
+        mc:Ignorable="d"
+        Title="Number Facts" Height="300" Width="400" FontSize="16" ResizeMode="NoResize">
+    <Grid >
+        <Label Content="_Number to get facts about:" HorizontalAlignment="Left" Margin="27,48,0,0" VerticalAlignment="Top" Target="{Binding ElementName=textFactNumber}" />
+        <TextBox x:Name="textFactNumber" HorizontalAlignment="Left" Margin="242,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Enter a number you want facts about."  />
+        <Button x:Name="buttonGetFacts" Content="Get _Facts!" HorizontalAlignment="Left" Margin="54,113,0,0" VerticalAlignment="Top" Width="90" IsDefault="True" ToolTip="Click to get number facts." Click="GetNumberFact"/>
+        <Button x:Name="buttonClear" Content="_Clear All!" HorizontalAlignment="Left" Margin="158,113,0,0" VerticalAlignment="Top" Width="90" ToolTip="Click to clear all input and output." Click="ClearForm"/>
+        <Button x:Name="buttonQuit" Content="_Quit!" HorizontalAlignment="Left" Margin="265,113,0,0" VerticalAlignment="Top" Width="90" ToolTip="Click to exit the program." Click="CloseForm"/>
+        <TextBox x:Name="textOwnPower" HorizontalAlignment="Left" Margin="34,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsReadOnly="True" ToolTip="Displays the number raised to its own power."/>
+        <TextBox x:Name="textFactorial" HorizontalAlignment="Left" Margin="34,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" IsReadOnly="True" ToolTip="Displays the result of the number as a factorial (e.g. &quot;n!&quot;)."/>
+
+    </Grid>
+</Window>
